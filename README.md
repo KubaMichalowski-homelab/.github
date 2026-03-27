@@ -11,4 +11,4 @@ The full technical write-up, including network diagrams, hardware specs, and my 
 > [!TIP]
 > Each repository here contains a sanitized `docker-compose.yml` and `.env.example` to demonstrate my deployment standards.
 
-[Main Profile ↗️](https://github.com/KubaMichalowski) | [Portfolio ↗️](https://kubamichalowski.pl)
+[Main Profile](https://github.com/KubaMichalowski) | [Portfolio](https://kubamichalowski.pl)
