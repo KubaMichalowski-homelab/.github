@@ -1,0 +1,23 @@
+name: Update Major Tag
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.BOT_TOKEN }}
+
+      - run: |
+          git config user.name "KubaMichalowski-bot"
+          git config user.email "69165823+KubaMichalowski-bot@users.noreply.github.com"
+          
+          MAJOR_VERSION=$(echo "${{ github.event.release.tag_name }}" | cut -d'.' -f1)
+          
+          git tag -f $MAJOR_VERSION
+          git push origin $MAJOR_VERSION --force
